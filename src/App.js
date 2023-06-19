@@ -1,10 +1,8 @@
-import { Button } from "@mui/material";
+import Counter from "./Counter/Counter";
 function App() {
   return (
     <div>
-      <Button variant="contained" color="primary">
-        COUNTER BRANCH
-      </Button>
+      <Counter />
     </div>
   );
 }
