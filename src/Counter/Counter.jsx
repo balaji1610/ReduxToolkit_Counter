@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../features/counter/counterSlice";
 import SecondChildren from "./SecondChildren";
 import Grid from "@mui/material/Grid";
+import Inputfield from "./Inputfield";
 export default function Counter() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
@@ -41,6 +42,8 @@ export default function Counter() {
           </div>
         </Grid>
       </Grid>
+      <h1>Add Number</h1>
+      <Inputfield />
     </div>
   );
 }
