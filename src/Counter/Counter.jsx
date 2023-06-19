@@ -43,7 +43,8 @@ export default function Counter() {
         </Grid>
       </Grid>
       <h1>Add Number</h1>
-      <Inputfield />
+
+  <Inputfield />
     </div>
   );
 }
