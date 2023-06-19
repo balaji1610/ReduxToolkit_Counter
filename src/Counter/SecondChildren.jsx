@@ -1,12 +1,20 @@
+import { useSelector, useDispatch } from "react-redux";
+import { decrement } from "../features/counter/counterSlice";
 import { Button } from "@mui/material";
-import { useSelector } from "react-redux";
-
 export default function SecondChildren() {
-  const up = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
+  const dec = useSelector((state) => state.counter.value);
+
+  const isCounterZero = dec === 0;
   return (
     <div>
-      <h1>{up}</h1>
-      <Button variant="contained" color="error">
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => dispatch(decrement())}
+        disabled={isCounterZero}
+      >
         -
       </Button>
     </div>
